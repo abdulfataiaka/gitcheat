@@ -1,0 +1,22 @@
+{
+  "name": "gitcheat",
+  "description": "A git cheat application to make the usage of git easy and understandable",
+  "main": "index.js",
+  "authors": [
+    "abdulfataiaka <abdulfataiaka@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/abdulfataiaka/gitcheat",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "roboto-fontface": "^0.10.0",
+    "font-awesome": "^5.5.0",
+    "bootstrap": "^4.1.3"
+  }
+}

@@ -1,0 +1,25 @@
+language: "node_js"
+
+node_js:
+  - "8"
+
+cache:
+  directories:
+    - "node_modules"
+    - "bower_components"
+
+env:
+  global:
+    - export NODE_ENV=test
+
+scripts:
+  - npm test
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "$HEROKU_API_KEY"
+  on:
+    branch:
+      - master
+      - develop
