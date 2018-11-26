@@ -12,5 +12,5 @@ env:
   global:
     - export NODE_ENV=test
 
-scripts:
+script:
   - npm test
