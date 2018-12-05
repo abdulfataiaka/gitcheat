@@ -1,0 +1,99 @@
+#search {
+  #search-section {
+    @include setFixHeight($fullHeight);
+
+    #search-form {
+      display: block;
+      width: 98%;
+      margin: 0;
+      height: 50px;
+      border-radius: 2px;
+      border: 1px solid #E8E8E8;
+      overflow: hidden;
+      margin: 0 0 30px;
+
+      input {
+        border: none;
+        outline: none;
+        float: left;
+        height: 46px;
+        width: 93%;
+        padding: 0 0 0 15px;
+        font-size: 18px;
+        font-weight: 400;
+        color: $black;
+      }
+
+      span {
+        display: inline-block;
+        width: 7%;
+        height: 48px;
+        text-align: center;
+        overflow: hidden;
+
+        i {
+          display: inline-block;
+          padding-top: 15px;
+          color: gray;
+          font-size: 20px;
+        }
+
+        img {
+          display: inline-block;
+          margin-top: 11px;
+          height: 28px;
+        }  
+      }
+      &:after {
+        @include clearfix();
+      }
+    }
+
+    #search-heading {
+      width: 98%;
+      margin: 0 0 10px;
+      height: 60px;
+      padding: 5px 0px;
+      overflow: hidden;
+
+      h1 {
+        display: block;
+        color: $black;
+        font-size: 20px;
+        margin-bottom: 12px;
+
+        span {
+          padding: 5px 10px;
+          min-width: 70px;
+          float: left;
+          text-align: center;
+          background: $green;
+          color: white;
+          border-radius: 50px;
+          font-size: 16px;
+          margin-right: 7px;
+          margin-top: -3px;
+          font-weight: 400;
+        }
+
+        &:after {
+          @include clearfix();
+        }
+      }
+
+      div {
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        background: #e9ecef;
+      }
+    }
+
+    #search-result {
+      @include setFixHeight(calc(100% - 158px));
+      width: 100%;
+      padding-right: 2%;
+      overflow-y: auto;
+    }
+  }
+}

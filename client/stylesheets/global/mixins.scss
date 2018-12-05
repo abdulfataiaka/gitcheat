@@ -1,0 +1,32 @@
+@mixin button($color: $green) {
+  display: inline-block;
+  border: 1px solid $color;
+  color: $color;
+  background: white;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 6px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin zerobtn {
+  display: inline-block;
+  background: none;
+  border: 1px solid lightgray;
+  outline: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+@mixin setFixHeight($height) {
+  height: $height;
+  overflow: hidden;
+}
+
+@mixin clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}

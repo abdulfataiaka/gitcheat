@@ -1,0 +1,91 @@
+$parentHeights: 100%;
+$helpListBoxHeight: 80%;
+
+#category {
+  #category-container {
+    @include setFixHeight($parentHeights);
+    width: 98%;
+    margin: 0;
+
+    #category-title {
+      display: block;
+      font-size: 40px;
+      font-weight: 600;
+      color: #272c34;
+      margin-bottom: 0;
+      height: 75px;
+      overflow: hidden;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40%;
+      margin-top: 2%;
+      border-radius: 1px;
+      border: 1px solid #E8E8E8;
+      border-left: 4px solid $green;
+    }
+
+    #help-lists {
+      padding-right: 2%;
+      height: calc(100% - 80px);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  #category-overlay {
+    @include setFixHeight($parentHeights);
+    width: 98%;
+    margin: 0;
+
+    #heading {
+      width: 100%;
+      height: 110px;
+      overflow: hidden;
+    }
+
+    #examples {
+      padding: 10px 2% 10px 1%;
+      width: 100%;
+      height: calc(100% - 110px);
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 200%;
+
+      p {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    #video {
+      padding: 0;
+      width: 100%;
+      height: calc(100% - 110px);
+      margin: 0;
+      overflow: hidden;
+
+      div {
+        display: block;
+        width: 99.8%;
+        height: 90%;
+        background: #171617;
+        border-radius: 1px;
+        overflow: hidden;
+        position: relative;
+        margin: 5px auto 0;
+      }
+    }
+    
+  }
+
+  #help-sidebar {
+    @include setFixHeight($parentHeights);
+  }
+}

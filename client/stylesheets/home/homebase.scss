@@ -1,0 +1,107 @@
+@import '../global/main';
+
+#help-about {
+  margin-top: 30px;
+
+  .pgalign {
+    width: 82%;
+  }
+
+  .heading {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #help-categ-tags {
+    margin-top: 30px;
+
+    .status {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    span {
+      float: left;
+      background: #F1F1F1;
+      padding: 8px 0;
+      color: black;
+      font-size: 13px;
+      font-weight: 300;
+      cursor: pointer;
+      border-left: 3px solid $green;
+      width: 20%;
+      margin: 0 2.5% 20px; 
+      border-radius: 1px;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+
+  #reactions {
+    margin: 20px 0 0;
+
+    button {
+      @include zerobtn();
+      color: white;
+      padding: 7px 15px;
+      border-radius: 2px;
+      border: none;
+      font-size: 13px;
+      font-weight: 100;
+
+      &:first-child{
+        margin-right: 10px;
+        background: $green;
+      }
+
+      &:last-child{
+        background: $red;
+      }
+
+      span {
+        margin: 0 5px 0 8px;
+      }
+
+      em {
+        font-style: normal;
+      }
+    }
+  }
+
+  #author {
+    margin: 55px auto 28px;
+
+    img {
+      float: left;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+    }
+
+    div {
+      float: left;
+      margin-left: 15px;
+
+      span {
+        display: block;
+        margin-top: 2px;
+
+        &:first-child{
+          font-weight: 300;
+
+          i {
+            display: inline-block;
+            font-size: 13px;
+            margin-left: 8px;
+          }
+        }
+
+        &:last-child{
+          margin-top: 3px;
+          color: $dark-gray;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

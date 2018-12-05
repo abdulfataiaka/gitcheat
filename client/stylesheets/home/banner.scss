@@ -1,0 +1,33 @@
+@import '../global/main';
+
+#banner {
+  width: 100%;
+  background: #e8f2eb;
+  border-radius: 1px;
+  height: 300px;
+  overflow: hidden;
+
+  .git-about{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 180%;
+
+    &:first-child {
+      margin-top: 50px;
+    }
+    &:nth-child(2) {
+      margin: 40px 0 0;
+    }
+  }
+
+  #start-button {
+    @include button();
+    padding: 8px 30px;
+  }
+
+  img {
+    display: inline-block;
+    height: 260px;
+    margin-top: 20px;
+  }
+}
