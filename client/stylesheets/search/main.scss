@@ -31,11 +31,16 @@
         text-align: center;
         overflow: hidden;
 
-        i {
-          display: inline-block;
-          padding-top: 15px;
-          color: gray;
-          font-size: 20px;
+        button {
+          @include zerobtn();
+          border: none;
+
+          i {
+            display: inline-block;
+            padding-top: 15px;
+            color: gray;
+            font-size: 20px;
+          }
         }
 
         img {
@@ -94,6 +99,11 @@
       width: 100%;
       padding-right: 2%;
       overflow-y: auto;
+
+      .status {
+        text-align: center;
+        margin-top: 10%;
+      }
     }
   }
 }

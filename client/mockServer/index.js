@@ -33,9 +33,14 @@ const login = (email, password) => waitV2((resolve, reject) => {
   else reject(errorobj('Generic error'));
 });
 
+const search = query => waitV2((resolve, reject) => {
+  if (query.length > 5) resolve(helps);
+  else reject(errorobj('Search error'));
+});
 
 export default {
   fetchHelps,
   fetchCategories,
-  login
+  login,
+  search
 };
