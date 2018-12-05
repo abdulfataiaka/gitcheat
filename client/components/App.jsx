@@ -7,12 +7,11 @@ import Search from './Search/Index';
 import Header from './Partials/Header/Index';
 import Footer from './Partials/Footer/Index';
 import AuthBox from './AuthBox/Index';
-
 import '../stylesheets/main.scss';
 
 const App = () => (
   <Fragment>
-    { false && <AuthBox /> }
+    <AuthBox />
     <Header />
 
     <Switch>
