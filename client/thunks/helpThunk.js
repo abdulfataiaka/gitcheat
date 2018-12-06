@@ -6,13 +6,6 @@ import {
   fetchCategoryHelpsFailure
 } from '../actions/helpAction';
 
-import { SET_CURRENT_HELP_ID } from '../utilities/actionTypes';
-
-export const setCurrentHelpId = helpId => dispatch => dispatch({
-  type: SET_CURRENT_HELP_ID,
-  helpId
-});
-
 export const fetchCategoryHelps = categoryId => (dispatch) => {
   dispatch(setCategoryHelpsLoading(true));
 
@@ -25,3 +18,5 @@ export const fetchCategoryHelps = categoryId => (dispatch) => {
       dispatch(fetchCategoryHelpsFailure());
     });
 };
+
+export default null;

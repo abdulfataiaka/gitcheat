@@ -1,49 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import HelpItemView from './View';
-import { setCurrentHelpId } from '../../../thunks/helpThunk';
-import { closeCategoryOverlay, setCategoryOverlayShow } from '../../../thunks/categoryThunk';
 
-class HelpItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  onVideoClick = () => {
-    const { _id } = this.props.help;
-    this.props.setCurrentHelpId(_id);
-    this.props.setCategoryOverlayShow('video');
-  };
-
-  onExamplesClick = () => {
-    const { _id } = this.props.help;
-    this.props.setCurrentHelpId(_id);
-    this.props.setCategoryOverlayShow('examples');
-  };
-
-  closeOverlay = () => {
-    this.props.closeCategoryOverlay();
-  }
-
-  render() {
-    const {
-      help, first, variant
-    } = this.props;
-
-    return (
-      <HelpItemView
-        help={help}
-        first={first}
-        variant={variant}
-        closeOverlay={this.closeOverlay}
-        videoClick={this.onVideoClick}
-        examplesClick={this.onExamplesClick}
-      />
-    );
-  }
-}
+const HelpItem = ({ help, first }) => (
+  <HelpItemView
+    help={help}
+    first={first}
+  />
+);
 
 HelpItem.propTypes = {
   help: PropTypes.shape({
@@ -51,22 +15,11 @@ HelpItem.propTypes = {
     examples: PropTypes.string,
     _id: PropTypes.number.isRequired
   }).isRequired,
-  first: PropTypes.bool,
-  variant: PropTypes.string,
-  closeCategoryOverlay: PropTypes.func.isRequired,
-  setCurrentHelpId: PropTypes.func.isRequired,
-  setCategoryOverlayShow: PropTypes.func.isRequired
+  first: PropTypes.bool
 };
 
 HelpItem.defaultProps = {
-  first: false,
-  variant: undefined
+  first: false
 };
 
-const mapDispatchToProps = {
-  closeCategoryOverlay,
-  setCurrentHelpId,
-  setCategoryOverlayShow
-};
-
-export default connect(null, mapDispatchToProps)(HelpItem);
+export default HelpItem;
