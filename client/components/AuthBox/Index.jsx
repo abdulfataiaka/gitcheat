@@ -1,7 +1,8 @@
-import React from 'react';
-// eslint-disable-next-line no-unused-vars
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import View from './View';
+import { toggleDrawer, login } from '../../thunks/authThunks';
 
 /**
  *
@@ -10,49 +11,114 @@ import { connect } from 'react-redux';
  *
  * @returns { JSX }
  */
-const AuthBox = () => (
-  <div id="auth-box">
-    <div className="overlay" />
-    <div className="box">
-      <button
-        className="close-btn"
-        type="button"
-      >
-        <i className="fas fa-angle-right" />
-      </button>
+class AuthBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { ...AuthBox.initState };
+  }
 
-      <h1>Administrator Login</h1>
-      <img src="/images/user.png" alt="user" />
+  closeDrawer = () => {
+    this.props.toggleDrawer();
+    this.setState({ ...AuthBox.initState });
+  }
 
-      <div className="field-group">
-        <label>Email Address</label>
-        <input type="text" />
-      </div>
+  onChange = (event) => {
+    const { target: { name, value } } = event;
+    this.setState({
+      [name]: value.trim(),
+      error: null
+    });
+  }
 
-      <div className="field-group">
-        <label>Password</label>
-        <input type="password" />
-      </div>
+  validate = () => {
+    const { email, password } = this.state;
 
-      <button
-        className="login-btn"
-        type="button"
-      >
-        Login
-      </button>
+    if (email.split('@').length !== 2) {
+      return 'Email provided is invalid';
+    }
 
-      <p>
-        Provide your email and password as an admin to manage
-        categories and helps on the application.
-      </p>
-    </div>
-  </div>
-);
+    if (password.length < 5) {
+      return 'Password too short';
+    }
 
-const mapStateToProps = () => ({});
+    return true;
+  }
 
-const mapDispatchToProps = {};
+  onSubmit = () => {
+    const { email, password } = this.state;
+    this.setState({
+      error: null,
+      loginInProgress: true
+    });
 
-AuthBox.propTypes = {};
+    const status = this.validate();
+    if (status !== true) {
+      this.setState({
+        error: status,
+        loginInProgress: false
+      }); return;
+    }
+
+    this.props.login(email, password)
+      .then(() => {
+        this.closeDrawer();
+      })
+      .catch((error) => {
+        this.setState({
+          loginInProgress: false,
+          password: '',
+          // ++ correct this later to use real api error message
+          error: error.message || 'unknown error'
+        });
+      });
+  }
+
+  render() {
+    const { drawerOpen } = this.props;
+    const {
+      loginInProgress,
+      error,
+      email,
+      password
+    } = this.state;
+
+    return (
+      <View
+        closeDrawer={this.closeDrawer}
+        show={drawerOpen}
+        login={this.props.login}
+        onChange={this.onChange}
+        onSubmit={this.onSubmit}
+        loginInProgress={loginInProgress}
+        email={email}
+        error={error}
+        password={password}
+      />
+    );
+  }
+}
+
+AuthBox.initState = {
+  loginInProgress: false,
+  error: null,
+
+  email: '',
+  password: ''
+};
+
+const mapStateToProps = ({ global: { drawerOpen } }) => ({
+  drawerOpen
+});
+
+const mapDispatchToProps = {
+  toggleDrawer,
+  login
+};
+
+AuthBox.propTypes = {
+  toggleDrawer: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
+  drawerOpen: PropTypes.bool.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthBox);

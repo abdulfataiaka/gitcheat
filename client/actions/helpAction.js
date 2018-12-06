@@ -4,7 +4,8 @@ import {
   FETCH_CATEGORY_HELPS_FAILURE,
   FETCH_CATEGORIES_FAILURE,
   FETCH_CATEGORIES_SUCCESS,
-  FETCH_CATEGORIES_LOADING
+  FETCH_CATEGORIES_LOADING,
+  LOGIN_SUCCESSFUL
 } from '../utilities/actionTypes';
 
 // ++ helps action creators
@@ -37,4 +38,11 @@ export const fetchCategoriesFailure = () => ({
 export const setCategoriesLoading = status => ({
   type: FETCH_CATEGORIES_LOADING,
   status
+});
+
+// ++ auth action creators
+
+export const loginSuccessful = email => ({
+  type: LOGIN_SUCCESSFUL,
+  email
 });

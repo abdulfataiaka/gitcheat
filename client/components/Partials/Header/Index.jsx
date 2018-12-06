@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { toggleDrawer, logout } from '../../../thunks/authThunks';
+import View from './View';
 
 /**
  *
@@ -8,33 +11,33 @@ import { Link } from 'react-router-dom';
  *
  * @returns { JSX }
  */
-const Header = () => (
-  <div id="header">
-    <div className="pgalign">
-      <div className="row">
-        <div className="col-6">
-          <Link to="/">
-            <span id="pgname">
-              Git Cheat
-            </span>
-          </Link>
-        </div>
-
-        <div className="col-6">
-          <div style={{ display: 'inline-block', float: 'right' }} className="clearfix">
-            <Link to="/search">
-              <span id="search-icon">
-                <i className="fas fa-search" />
-              </span>
-            </Link>
-
-            <span id="auth-button">Authenticate</span>
-            <span id="user-logo">G</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+const Header = ({
+  auth,
+  toggleDrawer: toggleDrawerThunk,
+  logout: logoutThunk
+}) => (
+  <View
+    openDrawer={toggleDrawerThunk}
+    logout={logoutThunk}
+    auth={auth}
+  />
 );
 
-export default Header;
+Header.propTypes = {
+  toggleDrawer: PropTypes.func.isRequired
+};
+
+const mapStateToProps = ({ auth }) => ({ auth });
+
+const mapDispatchToProps = {
+  toggleDrawer,
+  logout
+};
+
+Header.propTypes = {
+  toggleDrawer: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.shape({}).isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
