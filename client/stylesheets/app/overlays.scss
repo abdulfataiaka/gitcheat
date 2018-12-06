@@ -1,0 +1,24 @@
+.page-overlay {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  opacity: 0.8;
+  z-index: 100;
+
+  &.white {
+    background: white;
+    opacity: 0.96;
+  }
+}
+
+.page-overlay-content {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 101;
+}

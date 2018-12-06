@@ -1,5 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Banner from './Banner';
+import HomeBase from './HomeBase';
+import { fetchCategories } from '../../thunks/categoryThunk';
 
 /**
  *
@@ -8,14 +12,29 @@ import { Link } from 'react-router-dom';
  *
  * @returns { JSX }
  */
-const Home = () => (
-  <div className="test">
-    Welcome to home page
-
-    <div className="link text-center">
-      <Link to="/not-found">Not Found</Link>
-    </div>
-  </div>
+const Home = ({ categories, categoriesFetch }) => (
+  <main id="fill">
+    <Banner />
+    <HomeBase
+      categories={categories}
+      loading={categoriesFetch.loading}
+      error={categoriesFetch.error}
+    />
+  </main>
 );
 
-export default Home;
+const mapStateToProps = ({ categories, global: { categoriesFetch } }) => ({
+  categories,
+  categoriesFetch
+});
+
+const mapDispatchToProps = {
+  fetchCategories
+};
+
+Home.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  categoriesFetch: PropTypes.shape({}).isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

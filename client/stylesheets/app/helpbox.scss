@@ -1,0 +1,49 @@
+.help-box {
+  display: block;
+  margin: 25px 0 5px;
+
+  .help-title {
+    display: block;
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    button {
+      @include zerobtn();
+      border: none;
+      float: right;
+      font-size: 20px;
+      margin: 4px 5px 0 0;
+      cursor: pointer;
+      color: $light-black;
+
+      &:nth-child(2) {
+        margin-right: 15px;
+      }
+    }
+
+    &:after{
+      @include clearfix();
+    }
+  }
+}
+
+.colordiv {
+  display: block;
+  padding: 15px 20px 13px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 300;
+
+  &.cmd {
+    border-left: 8px solid #61656B;
+    background: #272c34;
+    color: white;
+  }
+
+  &.text {
+    background: #fff7d3;
+    border-left: 8px solid #ffe564;
+    color: black;
+  }
+}

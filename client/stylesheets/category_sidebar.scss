@@ -1,0 +1,46 @@
+#help-sidebar {
+  h1{
+    display: block;
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 13px 0 0 15px;
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid #E8E8E8;
+    color: gray;
+    border-left: 4px solid $green;
+    border-radius: 2px;
+  }
+
+  #category-items {
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    padding-right: 4%;
+
+    .category {
+      display: block;
+      margin-top: 15px;
+      cursor: pointer;
+
+      &:after {
+        @include clearfix();
+      }
+
+      span {
+        float: left;
+        font-size: 18px;
+        font-weight: 400;
+
+        &:nth-child(1) {
+          color: $light-gray;
+          margin-right: 5%;
+        }
+
+        &:nth-child(2) {
+          color: $light-black;
+        }
+      }
+    }
+  }
+}

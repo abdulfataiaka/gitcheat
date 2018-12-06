@@ -1,0 +1,13 @@
+main#fix, main#fill {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+main#fix {
+  height: calc(100% - 150px);
+}
+
+main#fill {
+  min-height: calc(100% - 150px);
+}

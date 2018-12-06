@@ -1,0 +1,44 @@
+#header {
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+
+  .pgalign {
+    margin-top: 15px;
+    padding: 5px 0;
+  }
+
+  #pgname {
+    font-size: 22px;
+    color: $light-black;
+    font-weight: 400;
+  }
+
+  #search-icon{
+    font-size: 20px;
+    color: $light-black;
+    margin-top: 3px;
+    float: left;
+    cursor: pointer;
+  }
+  
+  #auth-button{
+    @include button();
+    margin: 0 30px;
+    float: left;
+  } 
+  
+  #user-logo{
+    width: 34px;
+    height: 34px;
+    background: $red;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 18px;
+    font-weight: 300;
+    float: left;
+  }
+}
