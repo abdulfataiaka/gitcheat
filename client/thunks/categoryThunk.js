@@ -4,7 +4,7 @@ import {
   setCategoriesLoading,
   fetchCategoriesSuccess,
   fetchCategoriesFailure
-} from '../actions/helpAction';
+} from '../actions/categoryAction';
 
 export const fetchCategories = () => (dispatch) => {
   dispatch(setCategoriesLoading(true));

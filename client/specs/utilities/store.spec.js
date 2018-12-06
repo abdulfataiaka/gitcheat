@@ -1,6 +1,6 @@
 import { subscribeToStore } from '../../utilities/store';
 
-describe('Testing subscribeToStore', () => {
+describe('subscribeToStore method', () => {
   it('should return undefined', () => {
     // eslint-disable-next-line no-console
     console.log = jest.fn();
