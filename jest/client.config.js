@@ -15,6 +15,7 @@ module.exports = {
   coverageDirectory: 'client/coverage/',
   collectCoverageFrom: [
     'client/**/*.{js,jsx}',
+    '!client/mockServer/**/*'
   ],
   coveragePathIgnorePatterns: [
     '/client/stylesheets/',

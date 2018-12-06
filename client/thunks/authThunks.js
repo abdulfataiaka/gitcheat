@@ -1,7 +1,5 @@
 import server from '../mockServer';
-
-import { toggleDrawerAction, logoutAction } from '../actions/authAction';
-import { loginSuccessful } from '../actions/helpAction';
+import { toggleDrawerAction, logoutAction, loginSuccessful } from '../actions/authAction';
 
 export const toggleDrawer = () => dispatch => dispatch(toggleDrawerAction());
 
