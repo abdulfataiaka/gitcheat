@@ -4,29 +4,21 @@ export default [
     categoryId: 1,
     type: 'cmd',
     title: 'Installing git on windows using choco',
-    content: 'choco install git',
-    // video: 'https://www.youtube.com/embed/oj28uSf3oLY',
-    video: null,
-    examples: null
+    content: 'choco install git'
   },
   {
     _id: 2,
     categoryId: 1,
     type: 'text',
     title: 'Installing git on windows using git installer',
-    content: 'Downloading git installer from https://git-scm.com/download/win',
-    // video: 'https://www.youtube.com/embed/J_Clau1bYco',
-    video: null,
-    examples: null
+    content: 'Downloading git installer from https://git-scm.com/download/win'
   },
   {
     _id: 3,
     categoryId: 1,
     type: 'cmd',
     title: 'Installing git on windows using choco',
-    content: 'choco install git',
-    video: null,
-    examples: null
+    content: 'choco install git'
   },
   {
     _id: 4,

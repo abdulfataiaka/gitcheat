@@ -81,11 +81,6 @@ const View = ({
             )
         }
       </button>
-
-      <p>
-        Provide your email and password as an admin to manage
-        categories and helps on the application.
-      </p>
     </div>
   </div>
 );
