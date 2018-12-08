@@ -10,9 +10,9 @@ const Status = ({
         style={{ height: (imageHeight || '45px') }}
         alt="status img"
         src={
-          (imageType === 'empty' && '/images/empty.png')
-          || (imageType === 'error' && '/images/error.png')
-          || (imageType === 'loading' && '/images/bolt.gif')
+          (imageType === 'empty' && '/public/images/empty.png')
+          || (imageType === 'error' && '/public/images/error.png')
+          || (imageType === 'loading' && '/public/images/bolt.gif')
           || 'no-image'
         }
       />

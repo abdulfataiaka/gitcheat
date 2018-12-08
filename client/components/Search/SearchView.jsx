@@ -52,7 +52,7 @@ const SearchView = ({
                           <i className="fa fa-search" />
                         </button>
                       )
-                      : <img src="/images/bolt.gif" alt="loading" />
+                      : <img src="/public/images/bolt.gif" alt="loading" />
                   }
                 </span>
               </div>
