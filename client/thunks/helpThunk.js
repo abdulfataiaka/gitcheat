@@ -1,4 +1,4 @@
-import server from '../mockServer';
+import axios from 'axios';
 
 import {
   fetchCategoryHelpsSuccess,
@@ -9,8 +9,9 @@ import {
 export const fetchCategoryHelps = categoryId => (dispatch) => {
   dispatch(setCategoryHelpsLoading(true));
 
-  server.fetchHelps(categoryId, true)
-    .then((helps) => {
+  return axios.get(`/api/helps/${categoryId}`)
+    .then((response) => {
+      const { helps } = response.data;
       dispatch(fetchCategoryHelpsSuccess(helps));
       dispatch(setCategoryHelpsLoading(false));
     })
