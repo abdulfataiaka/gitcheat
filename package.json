@@ -28,7 +28,9 @@
   },
   "homepage": "https://github.com/abdulfataiaka/gitcheat#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "mongoose": "^5.3.15",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",

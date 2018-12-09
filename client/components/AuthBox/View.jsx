@@ -31,7 +31,7 @@ const View = ({
       </button>
 
       <h1>Administrator Login</h1>
-      <img className="user" src="/images/user.png" alt="user" />
+      <img className="user" src="/public/images/user.png" alt="user" />
 
       <div id="status-div" className={`${error ? 'error' : ''}`}>
         { error || 'Provide required details' }
@@ -70,7 +70,7 @@ const View = ({
             ? 'Login'
             : (
               <img
-                src="/images/bolt.gif"
+                src="/public/images/bolt.gif"
                 alt="loading"
                 style={{
                   height: '23px',
