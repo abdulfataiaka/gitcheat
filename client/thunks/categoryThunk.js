@@ -1,4 +1,4 @@
-import server from '../mockServer';
+import axios from 'axios';
 
 import {
   setCategoriesLoading,
@@ -9,8 +9,10 @@ import {
 export const fetchCategories = () => (dispatch) => {
   dispatch(setCategoriesLoading(true));
 
-  return server.fetchCategories(true)
-    .then((categories) => {
+  return axios.get('/api/categories')
+    .then((response) => {
+      const { categories } = response.data;
+
       dispatch(fetchCategoriesSuccess(categories));
       dispatch(setCategoriesLoading(false));
     })

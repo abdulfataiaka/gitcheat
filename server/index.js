@@ -11,8 +11,6 @@ const server = express();
 const port = process.env.PORT || 9000;
 const router = express.Router();
 
-db.connect();
-
 server.use('/build', express.static('build'));
 server.use('/public', express.static('public'));
 server.use('/bower_components', express.static('bower_components'));
@@ -27,9 +25,15 @@ server.all('*', (request, response) => {
   response.redirect('/');
 });
 
-server.listen(port, (error) => {
-  if (error) console.log('\n[!] Error occured while startinng server');
-  else console.log(`\n[*] Server started successfully on port ${port}`);
+db.connect((dberror) => {
+  console.log('\n[*] Attempting to start server');
+
+  if (!dberror) {
+    server.listen(port, (error) => {
+      if (error) console.log('[!] Error occured while starting server');
+      else console.log(`[*] Server started successfully on port ${port}`);
+    });
+  }
 });
 
 export default server;

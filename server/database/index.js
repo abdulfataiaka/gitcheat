@@ -5,25 +5,27 @@ import seeders from './seeders';
 
 dotenv.config();
 
-const { MONGO_URI } = process.env;
+const {
+  NODE_ENV,
+  MONGO_URI,
+  MONGO_URI_TEST
+} = process.env;
 
-const afterHook = () => {
-  mongoose.connection.db.dropDatabase();
-  seeders();
-};
+const DBURI = NODE_ENV === 'test'
+  ? MONGO_URI_TEST
+  : MONGO_URI;
 
-const connect = () => {
-  console.log('[*] Starting to connect to mongodb database');
+const connect = (done) => {
+  console.log('\n[*] Starting to connect to mongodb database');
 
-  mongoose.connect(MONGO_URI, {
-    useNewUrlParser: true
-  }, (error) => {
+  mongoose.connect(DBURI, { useNewUrlParser: true }, (error) => {
     if (error) {
       console.log('[!] Error occured while connecting to mongodb');
+      done(error);
     } else {
       console.log('[*] Connected to mongodb successful');
-
-      afterHook();
+      mongoose.connection.db.dropDatabase();
+      seeders(() => { done(null); });
     }
   });
 };

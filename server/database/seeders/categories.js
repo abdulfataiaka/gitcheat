@@ -1,7 +1,18 @@
 /* eslint-disable no-console */
 import Category from '../models/category';
 
-const categories = [
+const testSeeds = [
+  {
+    _id: 1,
+    name: 'Installation'
+  },
+  {
+    _id: 2,
+    name: 'Authorization'
+  },
+];
+
+const mainSeeds = [
   {
     _id: 1,
     name: 'Installation'
@@ -68,12 +79,18 @@ const categories = [
   }
 ];
 
-export default () => {
+const categories = process.env.NODE_ENV === 'test'
+  ? testSeeds
+  : mainSeeds;
+
+export default (done) => {
   Category.insertMany(categories, (error) => {
     if (error) {
       console.log('[!] Categories collection seed fail');
     } else {
       console.log('[*] Categories collection seeded successfully');
     }
+
+    if (typeof done === 'function') done();
   });
 };

@@ -1,7 +1,17 @@
 /* eslint-disable no-console */
 import Help from '../models/help';
 
-const helps = [
+const testSeeds = [
+  {
+    _id: 1,
+    categoryId: 1,
+    type: 'cmd',
+    title: 'Installing git on windows using choco',
+    content: 'choco install git'
+  }
+];
+
+const mainSeeds = [
   {
     _id: 1,
     categoryId: 1,
@@ -90,12 +100,18 @@ const helps = [
   }
 ];
 
-export default () => {
+const helps = process.env.NODE_ENV === 'test'
+  ? testSeeds
+  : mainSeeds;
+
+export default (done) => {
   Help.insertMany(helps, (error) => {
     if (error) {
       console.log('[!] Helps collection seed fail');
     } else {
       console.log('[*] Helps collection seeded successfully');
     }
+
+    if (typeof done === 'function') done();
   });
 };
