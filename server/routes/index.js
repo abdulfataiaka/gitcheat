@@ -1,4 +1,5 @@
 import CategoryController from '../controllers/category';
+import HelpController from '../controllers/help';
 
 export default (router) => {
   router.get('/', (request, response) => {
@@ -8,6 +9,7 @@ export default (router) => {
   });
 
   router.get('/categories', CategoryController.getAll);
+  router.get('/helps/:categoryId', HelpController.getCategoryHelps);
 
   router.all('*', (request, response) => {
     response.status(404).json({

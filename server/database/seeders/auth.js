@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import Auth from '../models/auth';
 
+const { NODE_ENV } = process.env;
+
 const testSeeds = [
   {
     email: 'test@gmail.com',
@@ -19,9 +21,7 @@ const mainSeeds = [
   }
 ];
 
-const auths = process.env.NODE_ENV === 'test'
-  ? testSeeds
-  : mainSeeds;
+const auths = NODE_ENV === 'test' ? testSeeds : mainSeeds;
 
 export default (done) => {
   Auth.insertMany(auths, (error) => {

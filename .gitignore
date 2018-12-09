@@ -4,3 +4,4 @@ build/
 client/coverage/
 .DS_Store
 .vs_code
+.env

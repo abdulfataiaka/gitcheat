@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import Help from '../models/help';
 
+const { NODE_ENV } = process.env;
+
 const testSeeds = [
   {
     _id: 1,
@@ -100,9 +102,7 @@ const mainSeeds = [
   }
 ];
 
-const helps = process.env.NODE_ENV === 'test'
-  ? testSeeds
-  : mainSeeds;
+const helps = NODE_ENV === 'test' ? testSeeds : mainSeeds;
 
 export default (done) => {
   Help.insertMany(helps, (error) => {

@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import Category from '../models/category';
 
+const { NODE_ENV } = process.env;
+
 const testSeeds = [
   {
     _id: 1,
@@ -79,9 +81,7 @@ const mainSeeds = [
   }
 ];
 
-const categories = process.env.NODE_ENV === 'test'
-  ? testSeeds
-  : mainSeeds;
+const categories = NODE_ENV === 'test' ? testSeeds : mainSeeds;
 
 export default (done) => {
   Category.insertMany(categories, (error) => {
