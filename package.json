@@ -30,6 +30,7 @@
   "homepage": "https://github.com/abdulfataiaka/gitcheat#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongoose": "^5.3.15",

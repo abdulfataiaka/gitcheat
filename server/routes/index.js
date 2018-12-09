@@ -1,5 +1,6 @@
 import CategoryController from '../controllers/category';
 import HelpController from '../controllers/help';
+import AuthController from '../controllers/auth';
 
 export default (router) => {
   router.get('/', (request, response) => {
@@ -10,6 +11,7 @@ export default (router) => {
 
   router.get('/categories', CategoryController.getAll);
   router.get('/helps/:categoryId', HelpController.getCategoryHelps);
+  router.post('/auth/login', AuthController.login);
 
   router.all('*', (request, response) => {
     response.status(404).json({
