@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import path from 'path';
 import express from 'express';
+import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import routes from './routes';
 import db from './database';
@@ -11,6 +12,8 @@ const server = express();
 const port = process.env.PORT || 9000;
 const router = express.Router();
 
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
 server.use('/build', express.static('build'));
 server.use('/public', express.static('public'));
 server.use('/bower_components', express.static('bower_components'));

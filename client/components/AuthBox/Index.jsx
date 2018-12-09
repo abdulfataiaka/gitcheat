@@ -68,7 +68,7 @@ class AuthBox extends Component {
           loginInProgress: false,
           password: '',
           // ++ correct this later to use real api error message
-          error: error.message || 'unknown error'
+          error: error.response.data.message || 'unknown error'
         });
       });
   }
