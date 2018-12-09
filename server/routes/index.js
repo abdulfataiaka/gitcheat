@@ -12,6 +12,7 @@ export default (router) => {
   router.get('/categories', CategoryController.getAll);
   router.get('/helps/:categoryId', HelpController.getCategoryHelps);
   router.post('/auth/login', AuthController.login);
+  router.post('/search', HelpController.searchHelp);
 
   router.all('*', (request, response) => {
     response.status(404).json({

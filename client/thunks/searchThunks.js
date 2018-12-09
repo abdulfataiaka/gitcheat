@@ -1,4 +1,4 @@
-import server from '../mockServer';
+import axios from 'axios';
 import { searchHelpFetchSuccess, searchHelpFetchFailure } from '../actions/searchAction';
 
 export const setSearchResult = helps => dispatch => dispatch(
@@ -6,8 +6,9 @@ export const setSearchResult = helps => dispatch => dispatch(
 );
 
 export const search = query => dispatch => (
-  server.search(query)
-    .then((helps) => {
+  axios.post('/api/search', { query })
+    .then((response) => {
+      const { helps } = response.data;
       dispatch(searchHelpFetchSuccess(helps));
     })
     .catch(() => {

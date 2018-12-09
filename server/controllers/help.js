@@ -1,6 +1,30 @@
 import Help from '../database/models/help';
 
 class HelpController {
+  static searchHelp(request, response) {
+    const { query } = request.body;
+    if (!query || !query.trim().length) {
+      return response.status(400).json({
+        message: 'Search query provided is invalid',
+        query: query || null
+      });
+    }
+
+    Help.find({ title: /.*choco.*/i }, (error, helps) => {
+      if (error) {
+        return response.status(500).json({
+          message: 'Database error occured',
+          error
+        });
+      }
+
+      response.status(200).json({
+        message: 'Search operation was successful',
+        helps
+      });
+    });
+  }
+
   static getCategoryHelps(request, response) {
     const { categoryId } = request.params;
     let id = parseInt(categoryId, 10);
