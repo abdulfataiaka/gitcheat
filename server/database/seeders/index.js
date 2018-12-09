@@ -14,6 +14,14 @@ try {
 
 const seeders = files.map(file => require(`${__dirname}/${file}`).default);
 
-export default () => {
-  seeders.forEach(seeder => seeder());
+export default (done) => {
+  let seedCount = 0;
+
+  seeders.forEach((seeder) => {
+    seeder(() => {
+      if (seedCount >= seeders.length - 1) {
+        if (typeof done === 'function') done();
+      } else seedCount += 1;
+    });
+  });
 };
