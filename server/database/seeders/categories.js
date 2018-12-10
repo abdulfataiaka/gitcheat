@@ -17,67 +17,51 @@ const testSeeds = [
 const mainSeeds = [
   {
     _id: 1,
-    name: 'Installation'
+    name: 'Install GIT',
   },
   {
     _id: 2,
-    name: 'Authorization'
+    name: 'Configuration',
   },
   {
     _id: 3,
-    name: 'Configuration'
+    name: 'Create Repositories',
   },
   {
     _id: 4,
-    name: 'Remote Repository'
+    name: 'Make Changes',
   },
   {
     _id: 5,
-    name: 'Branches'
+    name: 'Branches',
   },
   {
     _id: 6,
-    name: 'Create Repositories'
+    name: 'Moving and removing files',
   },
   {
     _id: 7,
-    name: 'Make Changes'
+    name: 'Stashing',
   },
   {
     _id: 8,
-    name: 'Move Files'
+    name: 'History and diff',
   },
   {
     _id: 9,
-    name: 'Removing Files'
+    name: 'Cancel and redo stuffs',
   },
   {
     _id: 10,
-    name: 'Stashing'
+    name: 'Sync and remote repos',
   },
   {
     _id: 11,
-    name: 'History and Diff'
+    name: 'Cancel and redo stuffs',
   },
   {
     _id: 12,
-    name: 'Reseting'
-  },
-  {
-    _id: 13,
-    name: 'Tagging'
-  },
-  {
-    _id: 14,
-    name: 'Stashing'
-  },
-  {
-    _id: 15,
-    name: 'Make Changes'
-  },
-  {
-    _id: 16,
-    name: 'Remote Push'
+    name: 'Tagging',
   }
 ];
 
