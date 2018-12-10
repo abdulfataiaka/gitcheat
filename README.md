@@ -9,13 +9,13 @@ A git cheat application to make the usage of git easy and understandable
 To run the application on your local machine, ensure you have `NodeJS +v8.12.0`, `Bower` and `NPM +v6.4.1` installed and follow the steps below to run the application.
 ```console
 
-$ git clone https://github.com/abdulfataiaka/grocery-v2.git
+$ git clone https://github.com/abdulfataiaka/gitcheat.git
 
 $ npm install
 
 $ bower install
 
-$ npm dev:start
+$ npm start:dec
 
 ```
 
@@ -23,16 +23,7 @@ $ npm dev:start
 
 Test suites has been written to guard against regression and ensure implementations don't break at any point in time.
 
-Run the tests using the commands below to run client and server tests individually
-```console
-
-$ npm run client:test
-
-$ npm run server:test
-
-```
-
-Or, run both with one command
+Run the tests using the commands below to run both client and server tests
 ```console
 
 $ npm test
@@ -47,8 +38,7 @@ The below list includes technologies put together to build this application
 - [SCSS](https://sass-lang.com/)
 - [Enzyme](http://airbnb.io/enzyme/)
 - [Babel Compiler](https://babeljs.io/docs/)
-- [Jasmine - Client](https://jasmine.github.io/)
-- [Mocha - Server](https://mochajs.org/)
+- [Jest](https://jest.io/)
 - [Roboto Google Font](https://fonts.google.com/specimen/Roboto?selection.family=Roboto:100,300,400,500,700)
 - [Javascript Extension](https://reactjs.org/docs/introducing-jsx.html)
 - [Font Awesome](https://fontawesome.com/icons)
@@ -64,7 +54,7 @@ The below list includes technologies put together to build this application
 Application has been hosted on `Heroku`, to check it out, visit the url below
 ```
 
-https://grocery-v2.herokuapp.com/
+https://gitcheat.herokuapp.com/
 
 ```
 

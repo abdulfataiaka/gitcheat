@@ -10,7 +10,7 @@ class HelpController {
       });
     }
 
-    const regex = new RegExp(`^.*${query}.*$`);
+    const regex = new RegExp(`^.*${query}.*$`, 'i');
     Help.find({ title: regex }, (error, helps) => {
       if (error) {
         return response.status(500).json({
