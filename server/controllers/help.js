@@ -10,7 +10,8 @@ class HelpController {
       });
     }
 
-    Help.find({ title: /.*choco.*/i }, (error, helps) => {
+    const regex = new RegExp(`^.*${query}.*$`);
+    Help.find({ title: regex }, (error, helps) => {
       if (error) {
         return response.status(500).json({
           message: 'Database error occured',

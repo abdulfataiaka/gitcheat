@@ -5,6 +5,9 @@
   "env": {
     "PORT": {
       "required": true
+    },
+    "MONGODB_URI": {
+      "required": true
     }
   },
   "formation": {
