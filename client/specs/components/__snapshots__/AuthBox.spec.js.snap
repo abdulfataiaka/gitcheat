@@ -1,0 +1,1186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthBox View Component should match snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <View
+    closeDrawer={[MockFunction]}
+    email="email@email.com"
+    error={null}
+    loginInProgress={false}
+    onChange={[MockFunction]}
+    onSubmit={[MockFunction]}
+    password="password"
+    show={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "closeDrawer": [MockFunction],
+      "email": "email@email.com",
+      "error": null,
+      "loginInProgress": false,
+      "onChange": [MockFunction],
+      "onSubmit": [MockFunction],
+      "password": "password",
+      "show": true,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        id="auth-box"
+        style="display: block;"
+      >
+        <div
+          class="overlay"
+        />
+        <div
+          class="box"
+        >
+          <button
+            class="close-btn"
+            type="button"
+          >
+            <i
+              class="fas fa-angle-right"
+            />
+          </button>
+          <h1>
+            Administrator Login
+          </h1>
+          <img
+            alt="user"
+            class="user"
+            src="/public/images/user.png"
+          />
+          <div
+            class=""
+            id="status-div"
+          >
+            Provide required details
+          </div>
+          <div
+            class="field-group"
+          >
+            <label>
+              Email Address
+            </label>
+            <input
+              name="email"
+              placeholder="email@domain.com"
+              type="text"
+              value="email@email.com"
+            />
+          </div>
+          <div
+            class="field-group"
+          >
+            <label>
+              Password
+            </label>
+            <input
+              name="password"
+              placeholder="password"
+              type="password"
+              value="password"
+            />
+          </div>
+          <button
+            class="login-btn"
+            type="button"
+          >
+            Login
+          </button>
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="overlay"
+          />,
+          <div
+            className="box"
+          >
+            <button
+              className="close-btn"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fas fa-angle-right"
+              />
+            </button>
+            <h1>
+              Administrator Login
+            </h1>
+            <img
+              alt="user"
+              className="user"
+              src="/public/images/user.png"
+            />
+            <div
+              className=""
+              id="status-div"
+            >
+              Provide required details
+            </div>
+            <div
+              className="field-group"
+            >
+              <label>
+                Email Address
+              </label>
+              <input
+                name="email"
+                onChange={[MockFunction]}
+                placeholder="email@domain.com"
+                type="text"
+                value="email@email.com"
+              />
+            </div>
+            <div
+              className="field-group"
+            >
+              <label>
+                Password
+              </label>
+              <input
+                name="password"
+                onChange={[MockFunction]}
+                placeholder="password"
+                type="password"
+                value="password"
+              />
+            </div>
+            <button
+              className="login-btn"
+              disabled={false}
+              onClick={[MockFunction]}
+              type="button"
+            >
+              Login
+            </button>
+          </div>,
+        ],
+        "id": "auth-box",
+        "style": Object {
+          "display": "block",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="overlay"
+          />,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "overlay",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="box"
+          >
+            <button
+              class="close-btn"
+              type="button"
+            >
+              <i
+                class="fas fa-angle-right"
+              />
+            </button>
+            <h1>
+              Administrator Login
+            </h1>
+            <img
+              alt="user"
+              class="user"
+              src="/public/images/user.png"
+            />
+            <div
+              class=""
+              id="status-div"
+            >
+              Provide required details
+            </div>
+            <div
+              class="field-group"
+            >
+              <label>
+                Email Address
+              </label>
+              <input
+                name="email"
+                placeholder="email@domain.com"
+                type="text"
+                value="email@email.com"
+              />
+            </div>
+            <div
+              class="field-group"
+            >
+              <label>
+                Password
+              </label>
+              <input
+                name="password"
+                placeholder="password"
+                type="password"
+                value="password"
+              />
+            </div>
+            <button
+              class="login-btn"
+              type="button"
+            >
+              Login
+            </button>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="close-btn"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-angle-right"
+                />
+              </button>,
+              <h1>
+                Administrator Login
+              </h1>,
+              <img
+                alt="user"
+                className="user"
+                src="/public/images/user.png"
+              />,
+              <div
+                className=""
+                id="status-div"
+              >
+                Provide required details
+              </div>,
+              <div
+                className="field-group"
+              >
+                <label>
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  onChange={[MockFunction]}
+                  placeholder="email@domain.com"
+                  type="text"
+                  value="email@email.com"
+                />
+              </div>,
+              <div
+                className="field-group"
+              >
+                <label>
+                  Password
+                </label>
+                <input
+                  name="password"
+                  onChange={[MockFunction]}
+                  placeholder="password"
+                  type="password"
+                  value="password"
+                />
+              </div>,
+              <button
+                className="login-btn"
+                disabled={false}
+                onClick={[MockFunction]}
+                type="button"
+              >
+                Login
+              </button>,
+            ],
+            "className": "box",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="close-btn"
+                type="button"
+              >
+                <i
+                  class="fas fa-angle-right"
+                />
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fas fa-angle-right"
+                />,
+                "className": "close-btn",
+                "onClick": [Function],
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <i
+                    class="fas fa-angle-right"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-angle-right",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "i",
+                },
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <h1>
+                Administrator Login
+              </h1>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Administrator Login",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Administrator Login",
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": <img
+                alt="user"
+                class="user"
+                src="/public/images/user.png"
+              />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "user",
+                "className": "user",
+                "src": "/public/images/user.png",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "img",
+            },
+            Object {
+              "instance": <div
+                class=""
+                id="status-div"
+              >
+                Provide required details
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Provide required details",
+                "className": "",
+                "id": "status-div",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Provide required details",
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div
+                class="field-group"
+              >
+                <label>
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  placeholder="email@domain.com"
+                  type="text"
+                  value="email@email.com"
+                />
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label>
+                    Email Address
+                  </label>,
+                  <input
+                    name="email"
+                    onChange={[MockFunction]}
+                    placeholder="email@domain.com"
+                    type="text"
+                    value="email@email.com"
+                  />,
+                ],
+                "className": "field-group",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <label>
+                    Email Address
+                  </label>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Email Address",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Email Address",
+                  ],
+                  "type": "label",
+                },
+                Object {
+                  "instance": <input
+                    name="email"
+                    placeholder="email@domain.com"
+                    type="text"
+                    value="email@email.com"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "email",
+                    "onChange": [MockFunction],
+                    "placeholder": "email@domain.com",
+                    "type": "text",
+                    "value": "email@email.com",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <div
+                class="field-group"
+              >
+                <label>
+                  Password
+                </label>
+                <input
+                  name="password"
+                  placeholder="password"
+                  type="password"
+                  value="password"
+                />
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label>
+                    Password
+                  </label>,
+                  <input
+                    name="password"
+                    onChange={[MockFunction]}
+                    placeholder="password"
+                    type="password"
+                    value="password"
+                  />,
+                ],
+                "className": "field-group",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <label>
+                    Password
+                  </label>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Password",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Password",
+                  ],
+                  "type": "label",
+                },
+                Object {
+                  "instance": <input
+                    name="password"
+                    placeholder="password"
+                    type="password"
+                    value="password"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "password",
+                    "onChange": [MockFunction],
+                    "placeholder": "password",
+                    "type": "password",
+                    "value": "password",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <button
+                class="login-btn"
+                type="button"
+              >
+                Login
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Login",
+                "className": "login-btn",
+                "disabled": false,
+                "onClick": [MockFunction],
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Login",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "closeDrawer": [MockFunction],
+        "email": "email@email.com",
+        "error": null,
+        "loginInProgress": false,
+        "onChange": [MockFunction],
+        "onSubmit": [MockFunction],
+        "password": "password",
+        "show": true,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          id="auth-box"
+          style="display: block;"
+        >
+          <div
+            class="overlay"
+          />
+          <div
+            class="box"
+          >
+            <button
+              class="close-btn"
+              type="button"
+            >
+              <i
+                class="fas fa-angle-right"
+              />
+            </button>
+            <h1>
+              Administrator Login
+            </h1>
+            <img
+              alt="user"
+              class="user"
+              src="/public/images/user.png"
+            />
+            <div
+              class=""
+              id="status-div"
+            >
+              Provide required details
+            </div>
+            <div
+              class="field-group"
+            >
+              <label>
+                Email Address
+              </label>
+              <input
+                name="email"
+                placeholder="email@domain.com"
+                type="text"
+                value="email@email.com"
+              />
+            </div>
+            <div
+              class="field-group"
+            >
+              <label>
+                Password
+              </label>
+              <input
+                name="password"
+                placeholder="password"
+                type="password"
+                value="password"
+              />
+            </div>
+            <button
+              class="login-btn"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="overlay"
+            />,
+            <div
+              className="box"
+            >
+              <button
+                className="close-btn"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-angle-right"
+                />
+              </button>
+              <h1>
+                Administrator Login
+              </h1>
+              <img
+                alt="user"
+                className="user"
+                src="/public/images/user.png"
+              />
+              <div
+                className=""
+                id="status-div"
+              >
+                Provide required details
+              </div>
+              <div
+                className="field-group"
+              >
+                <label>
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  onChange={[MockFunction]}
+                  placeholder="email@domain.com"
+                  type="text"
+                  value="email@email.com"
+                />
+              </div>
+              <div
+                className="field-group"
+              >
+                <label>
+                  Password
+                </label>
+                <input
+                  name="password"
+                  onChange={[MockFunction]}
+                  placeholder="password"
+                  type="password"
+                  value="password"
+                />
+              </div>
+              <button
+                className="login-btn"
+                disabled={false}
+                onClick={[MockFunction]}
+                type="button"
+              >
+                Login
+              </button>
+            </div>,
+          ],
+          "id": "auth-box",
+          "style": Object {
+            "display": "block",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="overlay"
+            />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "overlay",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="box"
+            >
+              <button
+                class="close-btn"
+                type="button"
+              >
+                <i
+                  class="fas fa-angle-right"
+                />
+              </button>
+              <h1>
+                Administrator Login
+              </h1>
+              <img
+                alt="user"
+                class="user"
+                src="/public/images/user.png"
+              />
+              <div
+                class=""
+                id="status-div"
+              >
+                Provide required details
+              </div>
+              <div
+                class="field-group"
+              >
+                <label>
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  placeholder="email@domain.com"
+                  type="text"
+                  value="email@email.com"
+                />
+              </div>
+              <div
+                class="field-group"
+              >
+                <label>
+                  Password
+                </label>
+                <input
+                  name="password"
+                  placeholder="password"
+                  type="password"
+                  value="password"
+                />
+              </div>
+              <button
+                class="login-btn"
+                type="button"
+              >
+                Login
+              </button>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="close-btn"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <i
+                    className="fas fa-angle-right"
+                  />
+                </button>,
+                <h1>
+                  Administrator Login
+                </h1>,
+                <img
+                  alt="user"
+                  className="user"
+                  src="/public/images/user.png"
+                />,
+                <div
+                  className=""
+                  id="status-div"
+                >
+                  Provide required details
+                </div>,
+                <div
+                  className="field-group"
+                >
+                  <label>
+                    Email Address
+                  </label>
+                  <input
+                    name="email"
+                    onChange={[MockFunction]}
+                    placeholder="email@domain.com"
+                    type="text"
+                    value="email@email.com"
+                  />
+                </div>,
+                <div
+                  className="field-group"
+                >
+                  <label>
+                    Password
+                  </label>
+                  <input
+                    name="password"
+                    onChange={[MockFunction]}
+                    placeholder="password"
+                    type="password"
+                    value="password"
+                  />
+                </div>,
+                <button
+                  className="login-btn"
+                  disabled={false}
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  Login
+                </button>,
+              ],
+              "className": "box",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="close-btn"
+                  type="button"
+                >
+                  <i
+                    class="fas fa-angle-right"
+                  />
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <i
+                    className="fas fa-angle-right"
+                  />,
+                  "className": "close-btn",
+                  "onClick": [Function],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <i
+                      class="fas fa-angle-right"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fas fa-angle-right",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "i",
+                  },
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <h1>
+                  Administrator Login
+                </h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Administrator Login",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Administrator Login",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <img
+                  alt="user"
+                  class="user"
+                  src="/public/images/user.png"
+                />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "user",
+                  "className": "user",
+                  "src": "/public/images/user.png",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "img",
+              },
+              Object {
+                "instance": <div
+                  class=""
+                  id="status-div"
+                >
+                  Provide required details
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Provide required details",
+                  "className": "",
+                  "id": "status-div",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Provide required details",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div
+                  class="field-group"
+                >
+                  <label>
+                    Email Address
+                  </label>
+                  <input
+                    name="email"
+                    placeholder="email@domain.com"
+                    type="text"
+                    value="email@email.com"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label>
+                      Email Address
+                    </label>,
+                    <input
+                      name="email"
+                      onChange={[MockFunction]}
+                      placeholder="email@domain.com"
+                      type="text"
+                      value="email@email.com"
+                    />,
+                  ],
+                  "className": "field-group",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <label>
+                      Email Address
+                    </label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Email Address",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Email Address",
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": <input
+                      name="email"
+                      placeholder="email@domain.com"
+                      type="text"
+                      value="email@email.com"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "email",
+                      "onChange": [MockFunction],
+                      "placeholder": "email@domain.com",
+                      "type": "text",
+                      "value": "email@email.com",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <div
+                  class="field-group"
+                >
+                  <label>
+                    Password
+                  </label>
+                  <input
+                    name="password"
+                    placeholder="password"
+                    type="password"
+                    value="password"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label>
+                      Password
+                    </label>,
+                    <input
+                      name="password"
+                      onChange={[MockFunction]}
+                      placeholder="password"
+                      type="password"
+                      value="password"
+                    />,
+                  ],
+                  "className": "field-group",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <label>
+                      Password
+                    </label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Password",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Password",
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": <input
+                      name="password"
+                      placeholder="password"
+                      type="password"
+                      value="password"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "password",
+                      "onChange": [MockFunction],
+                      "placeholder": "password",
+                      "type": "password",
+                      "value": "password",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <button
+                  class="login-btn"
+                  type="button"
+                >
+                  Login
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Login",
+                  "className": "login-btn",
+                  "disabled": false,
+                  "onClick": [MockFunction],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Login",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
